@@ -7,43 +7,9 @@ server.use(json());
 
 const PORT = 5000;
 
-const usuarios = [
-    {
-        username: "bobesponja",
-        avatar: "https://super.abril.com.br/wp-content/uploads/2020/09/04-09_gato_SITE.jpg?quality=70&strip=info"
-    },];
+const usuarios = [];
 
-const tweets = [
-    {
-        username: "bobesponja",
-        tweet: "post 7"
-    },
-    {
-        username: "bobesponja",
-        tweet: "post 6"
-    },
-    {
-        username: "bobesponja",
-        tweet: "post 5"
-    },
-    {
-        username: "bobesponja",
-        tweet: "post 4"
-    },
-    {
-        username: "bobesponja",
-        tweet: "post 3"
-    },
-    {
-        username: "bobesponja",
-        tweet: "post 2"
-    },
-    {
-        username: "bobesponja",
-        tweet: "Post 1"
-    },
-
-];
+const tweets = [];
 
 server.post("/sign-up", (req, res) => {
     const data = req.body;
