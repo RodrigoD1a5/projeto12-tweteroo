@@ -14,7 +14,17 @@ const tweets = [];
 server.post("/sign-up", (req, res) => {
     const data = req.body;
     usuarios.push(data);
-    res.send("OK!");
+    res.send("OK");
+});
+
+server.post("/tweets", (req, res) => {
+    const data = req.body;
+    if (!usuarios.find((item) => item.username === data.username)) {
+        res.send("UNAUTHORIZED");
+        return;
+    }
+    tweets.push(data);
+    res.send("OK");
 });
 
 server.listen(PORT, () => {
